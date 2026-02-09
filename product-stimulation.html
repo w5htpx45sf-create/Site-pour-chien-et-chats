@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header><div class="container nav"><a href="index.html" class="brand">Museau <span>&</span> Plume</a><nav class="nav-links"><a href="categories.html">Catégories</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header>
+<header><div class="container nav"><a href="index.html" class="brand">Museau <span>&</span> Plume</a><nav class="nav-links"><a href="categories.html">Catégories</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="cart.html">Panier (<span data-cart-count>0</span>)</a></nav></div></header>
 <main class="section">
   <div class="container">
     <span class="tag">Jeux & stimulation mentale</span>
     <h1>Tapis de Fouille Sensoriel — 39 €</h1>
     <p class="small">Format 45 x 45 cm • antidérapant • lavable</p>
+    <button class="btn btn-primary" data-add-to-cart data-product-id="tapis-fouille-sensoriel" data-product-name="Tapis de Fouille Sensoriel" data-product-price="39" data-product-category="Jeux & stimulation mentale">Ajouter au panier</button>
 
     <section class="card">
       <h2>Le problème réel</h2>
@@ -50,5 +51,7 @@
     </section>
   </div>
 </main>
+  <script src="cart.js"></script>
+  <script src="ui.js"></script>
 </body>
 </html>
