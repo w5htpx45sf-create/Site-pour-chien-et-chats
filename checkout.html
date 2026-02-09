@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Museau & Plume</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header><div class="container nav"><a href="index.html" class="brand">Museau <span>&</span> Plume</a><nav class="nav-links"><a href="categories.html">Catégories</a><a href="cart.html">Panier (<span data-cart-count>0</span>)</a></nav></div></header>
+<main class="section">
+  <div class="container grid grid-3">
+    <section class="card" style="grid-column: span 2;">
+      <h1>Checkout sécurisé</h1>
+      <p class="small">Vos informations sont utilisées uniquement pour préparer et livrer la commande.</p>
+      <form id="checkout-form" class="form-grid" novalidate>
+        <label>Nom complet<input required name="name" /></label>
+        <label>Email<input required type="email" name="email" /></label>
+        <label class="full">Adresse<input required name="address" /></label>
+        <label>Ville<input required name="city" /></label>
+        <label>Code postal<input required name="postalCode" /></label>
+        <label class="full">Pays<input required name="country" value="France" /></label>
+        <div class="full">
+          <button class="btn btn-primary" type="submit">Procéder au paiement</button>
+          <p id="checkout-message" class="message"></p>
+        </div>
+      </form>
+    </section>
+    <aside class="card">
+      <h2>Récapitulatif</h2>
+      <div data-checkout-summary></div>
+    </aside>
+  </div>
+</main>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="cart.js"></script>
+  <script src="ui.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>
